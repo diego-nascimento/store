@@ -1,0 +1,21 @@
+<h1>Novo Pedido: Muito Obrigado pela Compra</h1>
+{{#if idTransaction}}<h2>Codigo: {{idTransaction}}</h2>{{/if}} 
+<p>Forma de pagamento: {{method}}</p>
+<h2>Uma vez que o pagamento for concluido, será enviado um email com a confirmação!!</h2>
+<h3>Forma de Entrega: {{freteInfo.servico}} em um prazo de até {{freteInfo.prazo}} dias uteis</h3>
+<h2>
+  {{#if boletoURL}}
+    <a href={{boletoURL}}>Clique aqui</h1> para baixar o seu boleto.
+  {{/if}} 
+</h2>
+
+<h2>Produtos</h2>
+    {{#each Produtos}}
+        <h3>Nome: {{Nome}}</h3>
+        <span>Quantidade: {{quantidade}} </span>
+        <p>-----------------------------------------</p>
+        <b>SubTotal: {{subtotal}}</b>
+      {{/each}}
+    </tbody>
+  </table>
+  
